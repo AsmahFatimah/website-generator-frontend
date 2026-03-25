@@ -41,7 +41,8 @@ const WebsitePreview = () => {
 
 
 useEffect(() => {
-    fetchData()
+    if (id) fetchData();
+
     console.log(contactRef.current);
 }, [id])
 
