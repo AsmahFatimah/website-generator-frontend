@@ -1,9 +1,7 @@
-import React from 'react'
 import { IoIosCall } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { useSiteDetails } from '../context/SiteContext';
-import { Link } from 'react-router-dom';
 import { forwardRef } from 'react';
 import Section from '../section/Section';
 
