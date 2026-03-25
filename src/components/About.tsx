@@ -3,7 +3,7 @@ import Section from '../section/Section'
 const About =() => {
     const { Business:business } = useSiteDetails() || {}
   return (
-    <Section id='about' title='About Us' subTitle={`We are a dedicated team committed to providing top-quality services to our clients. Since ${business?.established || 'our beginning'}, our goal is to deliver exceptional results and ensure your satisfaction every step of the way.`} className='bg-[#792C2F] text-[#f7cec1]'>
+    <Section id='about' title='About Us' subTitle={`We are a dedicated team committed to providing top-quality services to our clients. Since ${business?.Established || 'our beginning'}, our goal is to deliver exceptional results and ensure your satisfaction every step of the way.`} className='bg-[#792C2F] text-[#f7cec1]'>
     </Section>
 //    <section className="flex flex-col md:flex-row justify-center items-center p-4 lg:px-36 gap-6 bg-[#6666]">
   
