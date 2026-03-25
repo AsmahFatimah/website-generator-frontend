@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import { Route, Routes } from 'react-router-dom';
 import WebsitePreview from './pages/WebsitePreview';
 import NotFound from './components/NotFound';
