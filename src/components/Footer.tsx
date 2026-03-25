@@ -1,6 +1,5 @@
-import React from 'react'
 import { useSiteDetails } from '../context/SiteContext'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Footer = () => {
     const { Business: business, imgs } = useSiteDetails() || {}
@@ -11,7 +10,7 @@ const Footer = () => {
     }
   return (
     <>
-<footer className="bg-black text-[#d1dfdbef] rounded-base shadow-xs  border-defaul ">
+<footer className="bg-black text-[#d1dfdbef] rounded-base shadow-xs  border-default ">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
             <a href='' onClick={scrollToTop} className="flex items-center mb-4 sm:mb-0">
