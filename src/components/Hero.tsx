@@ -1,6 +1,5 @@
-import React from 'react'
 import { useSiteDetails } from '../context/SiteContext'
-import { Link } from 'react-router-dom'
+
 interface Props{
   customScroll: () => void;
 }
