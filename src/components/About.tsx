@@ -1,7 +1,7 @@
 import { useSiteDetails } from '../context/SiteContext'
 import Section from '../section/Section'
 const About =() => {
-    const { business } = useSiteDetails() || {}
+    const { Business:business } = useSiteDetails() || {}
   return (
     <Section id='about' title='About Us' subTitle={`We are a dedicated team committed to providing top-quality services to our clients. Since ${business?.established || 'our beginning'}, our goal is to deliver exceptional results and ensure your satisfaction every step of the way.`} className='bg-[#792C2F] text-[#f7cec1]'>
     </Section>
