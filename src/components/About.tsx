@@ -1,6 +1,4 @@
-import React from 'react'
 import { useSiteDetails } from '../context/SiteContext'
-import { forwardRef } from 'react'
 import Section from '../section/Section'
 const About =() => {
     const { business } = useSiteDetails() || {}
