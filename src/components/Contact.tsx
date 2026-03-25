@@ -5,7 +5,7 @@ import { useSiteDetails } from '../context/SiteContext';
 import { forwardRef } from 'react';
 import Section from '../section/Section';
 
-const Contact = forwardRef((props, ref) => {
+const Contact = forwardRef((_props, _ref) => {
     const { Contact: contact, Address: address } = useSiteDetails() || {}
   return (
     // <section className="flex flex-col justify-center items-center text-center " ref={ref}>
