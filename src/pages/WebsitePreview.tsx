@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
@@ -9,7 +9,6 @@ import type { Site } from '../types/Site'
 import About from '../components/About'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-import Loader from '../components/Loader'
 import '../index.css'
 
 const WebsitePreview = () => {
