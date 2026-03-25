@@ -1,6 +1,4 @@
 import { useSiteDetails } from '../context/SiteContext'
-import { useParams } from 'react-router-dom';
-
 const Footer = () => {
     const { Business: business, imgs } = useSiteDetails() || {}
     const date = new Date().getFullYear();
