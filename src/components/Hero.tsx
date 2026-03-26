@@ -1,20 +1,26 @@
 import { useSiteDetails } from '../context/SiteContext'
+import { useState } from 'react'
 
 interface Props{
   customScroll: () => void;
 }
 const Hero = ({ customScroll } :Props) => {
     const { Business: business, imgs } = useSiteDetails() || {}
+    const { imgError, setImgError } = useState(false)
+    const hasLogo = imgs?.logo && imgs.logo !== "";
   return (
     <>
      <header className=" inset-x-0 h-20">
         <nav aria-label="Global" className="flex items-start justify-start p-6 lg:px-8">
           {
-            imgs?.logo ?  (<img
-                alt={business?.Name}
-                src={imgs.logo}
-                className="w-auto h-10"
-              />) : (<h1>{business?.Name}</h1>)
+              {hasLogo && !imgError ? (
+                    <img
+                      src={imgs.logo}
+                      className="w-auto h-10"
+                      alt={`${business?.Name}'s logo`}
+                      onError={() => setImgError(true)}
+                    />
+                  ) : (<h1>{business?.Name}</h1>)
           }
        
             </nav>
