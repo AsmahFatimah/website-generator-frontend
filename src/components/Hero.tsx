@@ -20,7 +20,10 @@ const Hero = ({ customScroll } :Props) => {
                       alt={`${business?.Name}'s logo`}
                       onError={() => setImgError(true)}
                     />
-                  ) : (<h1>{business?.Name}</h1>)
+                  ) : (
+                <span className="text-heading self-center text-2xl font-medium whitespace-nowrap ml-1 capitalize">{business?.Name}</span>
+
+                    )
           }
        
             </nav>
