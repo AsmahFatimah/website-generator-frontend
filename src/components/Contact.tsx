@@ -13,7 +13,7 @@ const Contact = forwardRef((_props, _ref) => {
     // <h3 className="font-bold text-2xl mb-2 capitalize">Reach out to Us</h3>
     // <h4 className='text-center max-w-lg'>Have questions or need more information? Our team is here to help. Reach out to us anytime and we’ll be happy to assist you</h4>
     // <div className='flex justify-center flex-col gap-1.5 text-start mt-2'>
-    <Section title='Reach out to Us' subTitle='Have questions or need more information? Our team is here to help. Reach out to us anytime and we’ll be happy to assist you' id='contact'>
+    <Section title='Reach out to Us' subTitle='Have questions or need more information? Our team is here to help. Reach out to us anytime and we’ll be happy to assist you' id='contact' ref ={ref}>
       <div className="p-4">
 {
         contact?.phoneNumber && (<div className='flex items-center flex-row gap-1 py-1'><IoIosCall /><a href={`tel:${contact.phoneNumber}`}>{contact.phoneNumber}</a></div>)
