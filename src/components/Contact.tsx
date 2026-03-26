@@ -2,10 +2,10 @@ import { IoIosCall } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { useSiteDetails } from '../context/SiteContext';
-import { forwardRef } from 'react';
+import { forwardRef, ForwardedRef } from 'react';
 import Section from '../section/Section';
 
-const Contact = forwardRef((props, ref) => {
+const Contact = forwardRef((props: {}, ref: ForwardedRef<HTMLDivElement>) => {
     const { Contact: contact, Address: address } = useSiteDetails() || {}
   return (
     // <section className="flex flex-col justify-center items-center text-center " ref={ref}>
