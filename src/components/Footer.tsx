@@ -1,4 +1,5 @@
 import { useSiteDetails } from '../context/SiteContext'
+import { useState } from 'react'
 const Footer = () => {
     const { Business: business, imgs } = useSiteDetails() || {}
     const date = new Date().getFullYear();
@@ -6,17 +7,22 @@ const Footer = () => {
         event.preventDefault()
         window.scrollTo({top: 0, behavior:'smooth'})
     }
+    const [imgError, setImgError] = useState(false)
+    const hasLogo = imgs?.logo && imgs.logo !== "";
   return (
     <>
 <footer className="bg-black text-[#d1dfdbef] rounded-base shadow-xs  border-default ">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
             <a href='' onClick={scrollToTop} className="flex items-center mb-4 sm:mb-0">
-                {
-                    imgs?.logo ? (
-                <><img src={imgs?.logo} className="h-7" alt={`${business?.Name}'s logo`} /><span className="text-heading self-center text-2xl font-medium whitespace-nowrap ml-1 capitalize">{business?.Name}</span></>
-
-                    ) : (
+               {hasLogo && !imgError ? (
+                    <img
+                      src={imgs.logo}
+                      className="h-7"
+                      alt={`${business?.Name}'s logo`}
+                      onError={() => setImgError(true)}
+                    />
+                  ) : (
                 <span className="text-heading self-center text-2xl font-medium whitespace-nowrap ml-1 capitalize">{business?.Name}</span>
 
                     )
