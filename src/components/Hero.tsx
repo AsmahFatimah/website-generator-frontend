@@ -6,7 +6,7 @@ interface Props{
 }
 const Hero = ({ customScroll } :Props) => {
     const { Business: business, imgs } = useSiteDetails() || {}
-    const { imgError, setImgError } = useState(false)
+    const [ imgError, setImgError ] = useState(false)
     const hasLogo = imgs?.logo && imgs.logo !== "";
   return (
     <>
