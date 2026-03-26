@@ -12,7 +12,7 @@ const Hero = ({ customScroll } :Props) => {
     <>
      <header className=" inset-x-0 h-20">
         <nav aria-label="Global" className="flex items-start justify-start p-6 lg:px-8">
-          {
+          
               {hasLogo && !imgError ? (
                     <img
                       src={imgs.logo}
