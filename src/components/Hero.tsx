@@ -16,7 +16,7 @@ const Hero = ({ customScroll } :Props) => {
               {hasLogo && !imgError ? (
                     <img
                       src={imgs.logo}
-                      className="w-auto h-10"
+                      className="max-w-2/3 h-10"
                       alt={`${business?.Name}'s logo`}
                       onError={() => setImgError(true)}
                     />
@@ -28,7 +28,8 @@ const Hero = ({ customScroll } :Props) => {
        
             </nav>
             </header>
-       <div className="flex justify-center items-center flex-col min-h-[60vh] ">
+      <div className ="min-h-[60vh]">
+       <div className="flex justify-center items-center flex-col  ">
             
       <h1 className='text-(--primary-color) uppercase font-bold text-3xl'>
         {business?.Tagline ||business?.Name} 
@@ -38,6 +39,8 @@ const Hero = ({ customScroll } :Props) => {
       </h2>
       <button className='btn p-3 rounded-md' onClick={customScroll}>Reach out to us.</button>
       </div>
+      </div>
+      
     </>
   )
   
