@@ -16,7 +16,7 @@ const Hero = ({ customScroll } :Props) => {
               {hasLogo && !imgError ? (
                     <img
                       src={imgs.logo}
-                      className="max-w-2/3 h-10"
+                      className="h-12 w-auto object-contain"
                       alt={`${business?.Name}'s logo`}
                       onError={() => setImgError(true)}
                     />
