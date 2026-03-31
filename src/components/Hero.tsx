@@ -16,7 +16,7 @@ const Hero = ({ customScroll } :Props) => {
               {hasLogo && !imgError ? (
                     <img
                       src={imgs.logo}
-                      className="h-12 w-auto object-contain"
+                      className="h-14 w-auto object-contain"
                       alt={`${business?.Name}'s logo`}
                       onError={() => setImgError(true)}
                     />
@@ -28,8 +28,8 @@ const Hero = ({ customScroll } :Props) => {
        
             </nav>
             </header>
-      <div className ="min-h-[60vh]">
-       <div className="flex justify-center items-center flex-col  ">
+      <div className ="">
+       <div className="flex justify-center items-center flex-col  min-h-[60vh] gap-4 py-4">
             
       <h1 className='text-(--primary-color) uppercase font-bold text-3xl'>
         {business?.Tagline ||business?.Name} 
